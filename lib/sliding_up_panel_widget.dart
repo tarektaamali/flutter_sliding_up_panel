@@ -80,6 +80,7 @@ class SlidingUpPanelWidget extends StatefulWidget {
     @required this.controlHeight,
     this.animationController,
     @required this.panelController,
+    @required this.margin,
     this.onStatusChanged,
     this.onTap,
     this.enableOnTap = true,
