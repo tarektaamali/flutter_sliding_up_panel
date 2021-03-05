@@ -42,6 +42,8 @@ class SlidingUpPanelWidget extends StatefulWidget {
   ///The height of the widget to drag
   final double controlHeight;
 
+  final EdgeInsetsGeometry margin;
+
   /// The animation that controls the bottom sheet's position.
   ///
   /// The BottomSheet widget will manipulate the position of this animation, it
@@ -201,7 +203,8 @@ class _SlidingUpPanelWidgetState extends State<SlidingUpPanelWidget>
                 key: _childKey,
                 color: Colors.transparent,
                 elevation: widget.elevation,
-                child: SizedBox(
+                child: Container(
+                  margin: widget.margin, 
                   height: MediaQuery.of(context).size.height,
                   child: widget.child,
                 ),
